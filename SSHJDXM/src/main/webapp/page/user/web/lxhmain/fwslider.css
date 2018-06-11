@@ -1,0 +1,666 @@
+/* ------------------------------- 3. Slider Styles ------------------------------- */
+#fwslider {
+    width:100%;
+}
+
+#fwslider .slide {
+    display: none;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 0;
+    width:100%;
+    max-width:1920px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+#fwslider .slide img {
+    width:100%;
+}
+
+#fwslider .slidePrev {
+    position: absolute;
+    top:50%;
+    left:-50px;
+    
+    z-index: 10;
+}
+#fwslider .slidePrev span {
+	background-image: url("images/sliderarrows.png");
+	width: 60px;
+	height: 60px;
+	float: left;
+	background-position: -60px 0px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+#fwslider .slideNext {
+    position: absolute;
+    top:50%;
+    right:-50px;
+    z-index: 10;
+}
+#fwslider .slideNext span {
+ 	 background-image: url("images/sliderarrows.png");
+	width: 60px;
+	height: 60px;
+	float: left;
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+	cursor: pointer;
+}
+
+#fwslider .timers {
+    height:4px;
+    position: absolute;
+    bottom:60px;
+    right:0;
+    z-index: 3;
+}
+.slide-btns{
+	margin-top: 0.5em;
+}
+#fwslider .timer {
+    height:4px;
+    width:40px;
+    background-color: #fff;
+    float:left;
+    margin-right: 10px;
+}
+
+#fwslider .progress {
+    height:4px;
+    width:0%;
+    background-color:#2C3E50;
+    float:left;
+}
+
+#fwslider .slide_content {
+    top:0;
+    left:0;
+    position: absolute;
+    width:100%;
+    height:100%;
+    min-height:650px;
+}
+
+#fwslider .slide_content_wrap { /* Slider Text Content Container Style */
+    max-width:1280px;
+    margin: 13.5% auto 0;
+}
+
+#fwslider .title {  /* Slider Title Style */
+	text-transform: uppercase;
+	color: #fff;
+	font-size: 2em;
+	padding: 16px 20px 0;
+	font-style: normal;
+	font-weight: 600;
+	border: none;
+	width: 50%;
+	height: 64px;
+	position: relative;
+	background: none;
+	left: 30px;
+	filter:alpha(opacity=50);  
+	-moz-opacity:0.5;  
+	-khtml-opacity: 0.5;  
+    opacity: 0.5; 
+}
+h4 i.bg{
+	background: url('../images/stripe.png') 0px 0px;
+	width: 40px;
+	height: 80px;
+	position: absolute;
+	right: -38px;
+	top: 0px;
+}
+
+#fwslider .title1{  
+	text-transform: capitalize;
+	color: #fff;
+	font-size: 1.5em;
+	padding: 12px 20px 5px;
+	font-style: normal;
+	font-weight: 400;
+	border: none;
+	/*width: 40%;*/
+	height: 41px;
+    line-height:34px;
+	position: relative;
+	left: 30px;
+	background: #000;
+	filter:alpha(opacity=80);  
+	-moz-opacity:0.8;  
+	-khtml-opacity: 0.8;  
+    opacity: 0.8;  
+    width:40%;
+}
+h5 i.bg{
+	background: url('images/stripe1.png') 0px 0px;
+	width: 34px;
+	height: 58px;
+	position: absolute;
+	right: -34px;
+	top: 0px;
+}
+#fwslider .description { /* Slider Description Style */
+    opacity: 0;
+    color:#ffffff;
+    font-size: 1.5em;
+    padding:0px 0 1em;
+    clear:both;
+   	text-align:center;
+}
+/* ------------------------------- 4. Media Query Max Width 1300, Min Width 720 ------------------------------- */
+@media only screen and (min-width: 1024px) {
+	.wrap{
+		width:95%;
+	}
+	#fwslider .slidePrev span {
+		width: 46px;
+		height: 46px;
+		background-position: -66px -6px;
+	}
+	#fwslider .slideNext span {
+		width: 46px;
+		height: 46px;
+		background-position: -6px -6px;
+	}
+	
+}
+
+@media only screen and (min-width:720px) and (max-width: 1300px) {
+
+    #fwslider .slide_content_wrap { margin-top: 12%;}
+     #fwslider .description { /*-- font-size:12px;--*/font-size:1.3em;}
+	#fwslider .title {
+		font-size: 1.8em;
+		left: 80px;
+		width: 60%;
+	}
+	#fwslider .title1 {
+		font-size: 1.3em;
+		left: 80px;
+	}
+}
+
+/* ------------------------------- 5. Media Query Max Width 719 ------------------------------- */
+
+@media only screen and (max-width:719px) {
+
+    #fwslider .slide_content_wrap { display:block; }
+    #fwslider .timers { display:none; }
+    #fwslider .slide_content {cursor: pointer;}
+    #fwslider .slide_content_wrap {
+	max-width: 1280px;
+	margin: 11.5% auto 0;
+	}
+
+}
+@media only screen and (max-width:768px) and (min-width:640px){
+	 #fwslider .title {
+		font-size: 1.4em;
+		padding: 6px 20px 10px;
+		line-height: 3em;
+	}
+	#fwslider .title1 {
+		font-size: 1em;
+		left: 80px;
+		line-height: 2em;
+	}
+     #fwslider .description { /*-- font-size:12px;--*/font-size:1em;}
+}
+@media only screen and (max-width:640px) and (min-width:480px){
+	 #fwslider .title { 
+	 	font-size: 1em;
+		font-weight: 400;
+		left: 80px;
+		line-height: 4em;
+ 	 }
+ 	 #fwslider .title1 {
+		font-size: 0.8725em;
+		left: 80px;
+		line-height: 2.5em;
+		font-weight: 100;
+	}
+     #fwslider .description { /*-- font-size:12px;--*/font-size: 0.875em;
+		padding: 0.5em 0 0.2em;}
+}
+@media only screen and (max-width:480px) and (min-width:320px){
+	 #fwslider .title { 
+	 	font-size: 1em;
+		font-weight: 400;
+		left: 80px;
+		line-height: 4em;
+ 	 }
+ 	 #fwslider .title1 {
+		font-size: 0.8725em;
+		left: 80px;
+		line-height: 2.5em;
+		font-weight: 100;
+		width: 55%;
+	}
+     #fwslider .description { 
+     	font-size: 0.875em;
+		padding: 0.5em 0 0.2em;
+		width: 70%;
+		margin: 0 auto;
+		}
+	#fwslider .slide_content_wrap {
+	max-width: 1280px;
+	margin: 7.5% auto 0;
+	}
+}
+@media only screen and (max-width:320px) and (min-width:240px){
+	 #fwslider .title { 
+	 	font-size: 1em;
+		font-weight: 400;
+		left:10px;
+		line-height: 4em;
+		display: none;
+ 	 }
+ 	 #fwslider .title1 {
+		font-size: 0.8725em;
+		left: 15px;
+		line-height: 2.5em;
+		font-weight: 100;
+		top:30px;
+		width: 55%;
+	}
+
+     #fwslider .description { 
+     	font-size: 0.8em;
+		padding: 0.5em 0 0.2em;
+		width: 90%;
+		margin: 0 auto;
+		}
+	#fwslider .slide_content_wrap {
+	max-width: 1280px;
+	margin: 2.5% auto 0;
+	}
+	#fwslider .slideNext span,#fwslider .slidePrev span{
+		display:none;
+	}
+	.slide-btns ul li a {
+		color: #FFF;
+		font-size: 0.72em;
+		text-transform: uppercase;
+		border: solid 1px #FFF;
+		padding: 0.7em 0.8em;
+		transition: 0.5s all;
+		-webkit-transition: 0.5s all;
+		-moz-transition: 0.5s all;
+		-o-transition: 0.5s all;
+		display: block;
+	}
+	.sb-search-input {
+			font-size: 12px;
+	}
+}
+
+
+
+
+.container_test {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+            box-sizing: border-box;
+        }
+
+
+
+        .btnJoin {
+            height: 40%;
+            text-align: center;
+            border: 1px solid #2A4F67;
+            width: 10%;
+            color: #2A4F67;
+            margin: 0 auto;
+            margin-top: 10px;
+            min-height: 50px;
+            line-height: 50px;
+            font-weight: bold;
+            border-radius: 0px;
+            cursor: pointer;
+        }
+
+            .btnJoin:hover {
+                background-color: #2A4F67;
+                color: #FFF;
+            }
+
+        .mid-content a {
+            cursor: pointer;
+        }
+
+        #ui-datepicker-div {
+            background: none;
+        }
+
+        .tdChildNav {
+            font-size: 0.8em;
+            text-align: left;
+            padding-top: 5px;
+            cursor: pointer;
+            padding-left:3px;
+        }
+        .tdChildNav a{
+          text-decoration:none;
+          color:#FFF;
+        }
+            .tdChildNav a:visited {
+                text-decoration: none;
+            }
+
+            .tdChildNav::outside {
+                font-weight: normal;
+            }
+
+        .tdTitleNav {
+            font-size: 0.95em;
+            text-align: left;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+
+        #divActivity {
+            position: relative;
+            overflow: auto;
+        }
+
+            #divActivity li {
+                list-style: none;
+            }
+
+        #divActivity ul li {
+            float: left;
+           
+        }
+
+        .policeInfo {
+            clear: both; height: 100%; width: 80%; margin: 0 auto; font-size: 0.8em; color: #FFF; padding-top: 20px; text-align: center;
+        }
+            .policeInfo a {
+                color:#FFF;
+                text-decoration:none;
+            }
+            .policeInfo a:visited {
+                color: #FFF;
+                text-decoration: none;
+            }
+        .brand_hotel3 {
+            transition: background-size 0.5s linear;
+        }
+
+@media only screen and (max-width: 980px){
+    .title1 {
+        font-size:1.1em !important;
+        }
+}
+
+/*公司简介和会员简介 轮播Start*/
+
+.carousel-inner .item
+{
+    margin-bottom:30px;
+}
+
+.carousel {
+  position: relative;
+  /*margin-bottom: 20px;*/
+  line-height: 1;
+}
+
+.carousel-inner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  cursor:pointer;
+}
+
+.carousel-inner > .item {
+  position: relative;
+  display: none;
+  -webkit-transition: 0.6s ease-in-out left;
+     -moz-transition: 0.6s ease-in-out left;
+       -o-transition: 0.6s ease-in-out left;
+          transition: 0.6s ease-in-out left;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  display: block;
+  line-height: 1;
+}
+
+.carousel-inner > .active,
+.carousel-inner > .next,
+.carousel-inner > .prev {
+  display: block;
+}
+
+.carousel-inner > .active {
+  left: 0;
+}
+
+.carousel-inner > .next,
+.carousel-inner > .prev {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.carousel-inner > .next {
+  left: 100%;
+}
+
+.carousel-inner > .prev {
+  left: -100%;
+}
+
+.carousel-inner > .next.left,
+.carousel-inner > .prev.right {
+  left: 0;
+}
+
+.carousel-inner > .active.left {
+  left: -100%;
+}
+
+.carousel-inner > .active.right {
+  left: 100%;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 40%;
+  left: 15px;
+  width: 40px;
+  height: 40px;
+  margin-top: -20px;
+  font-size: 60px;
+  font-weight: 100;
+  line-height: 30px;
+  color: #ffffff;
+  text-align: center;
+  background: #222222;
+  border: 3px solid #ffffff;
+  -webkit-border-radius: 23px;
+     -moz-border-radius: 23px;
+          border-radius: 23px;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+
+.carousel-control.right {
+  right: 15px;
+  left: auto;
+}
+
+.carousel-control:hover,
+.carousel-control:focus {
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+
+.carousel-indicators {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 5;
+  margin: 0;
+  list-style: none;
+}
+
+.carousel-indicators li {
+  display: block;
+  float: left;
+  width: 10px;
+  height: 10px;
+  margin-left: 5px;
+  text-indent: -999px;
+  background-color: #ccc;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 5px;
+  cursor:pointer;
+}
+
+.carousel-indicators .active {
+  background-color: #fff;
+}
+
+.carousel-caption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 15px;
+  background: #333333;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.carousel-caption h4,
+.carousel-caption p {
+  line-height: 20px;
+  color: #ffffff;
+}
+
+.carousel-caption h4 {
+  margin: 0 0 5px;
+}
+
+.carousel-caption p {
+  margin-bottom: 0;
+}
+
+ .zUIpanelScrollBox, .zUIpanelScrollBar {
+            width: 10px;
+            top: 4px;
+            right: 2px;
+            border-radius: 5px;
+        }
+
+        .zUIpanelScrollBox {
+            background: #A2D2B7;
+            opacity: 0.1;
+            filter: alpha(opacity=10);
+        }
+
+        .zUIpanelScrollBar {
+            background: #B4D5CE;
+            opacity: 0.8;
+            filter: alpha(opacity=80);
+        }
+/*公司简介和会员简介 轮播----End*/
+
+
+
+
+
+/*头部导航*/
+.navHead{
+    height:70px;position:relative;z-index:99999;width:100%;
+    margin-left:auto;margin-right:auto;
+    background:rgba(0, 0, 0, 0.5);
+    color:#323232
+}
+.navHead > .content{
+    width:95%;height:100%;
+    margin-left:auto;
+    margin-right:auto;
+    float:none;
+}
+.rightLogo{
+    width:20%;float:left;cursor:pointer;height:70px;
+}
+.rightLogo img{
+    padding-top:7px;
+}
+.rightLogin{
+    width:20%;
+    float:right;
+    height:70px;
+}
+.liLogo{
+    margin:10px 16px;
+}
+
+/*推荐酒店*/
+.threeHotel{
+    background-color: #f4f4f4
+}
+
+@media only screen and (min-width:1900px){
+    .threeHotel{
+        width:1400px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .main_bg{
+        background-color:#fff;
+    }
+    
+
+}
+@media only screen and (min-width:2500px){
+    #fwslider .slide{
+        margin-left:312px;
+    }
+    #fwslider .slidePrev{
+        margin-left:312px;
+    }
+    #fwslider .slideNext{
+        margin-right:312px;
+    }
+}
+
+/*@media only screen and (min-width:1366px){
+    .navHead{
+        width:100%;
+    }
+}
+
+@media (min-width: 1280px) and (max-width: 1365px){
+    .navHead{
+        width:100%;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1279px){
+    .navHead{
+        width:100%;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1023px){
+    .navHead{
+        width:100%;
+    }
+}*/

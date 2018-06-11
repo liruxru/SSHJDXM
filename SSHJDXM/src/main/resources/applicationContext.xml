@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:cache="http://www.springframework.org/schema/cache"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.1.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.1.xsd
+		http://www.springframework.org/schema/cache http://www.springframework.org/schema/cache/spring-cache-4.1.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.1.xsd">
+	<context:annotation-config/>
+	<context:component-scan base-package="com.oracle"></context:component-scan>
+	<!-- 加载属性文件 -->
+	<context:property-placeholder location="classpath:db.properties"/>
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="${jdbc.driverClass}"/>
+		<property name="jdbcUrl" value="${jdbc.jdbcUrl}"/>
+		<property name="user" value="${jdbc.user}"/>
+		<property name="password" value="${jdbc.password}"/>
+	</bean>
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.format_sql">true</prop>
+			</props>
+		</property>
+		<property name="annotatedClasses">
+			<list>
+				<value>com.oracle.entity.Roomusers</value>
+				<value>com.oracle.entity.Entrepot</value>
+				<value>com.oracle.entity.Area</value>
+				<value>com.oracle.entity.Goodsimg</value>
+				<value>com.oracle.entity.Assetsdetal</value>
+				<value>com.oracle.entity.Ditty</value>
+				<value>com.oracle.entity.Roomimgs</value>
+				<value>com.oracle.entity.Customerorders</value>
+				<value>com.oracle.entity.Customerorderitems</value>
+				<value>com.oracle.entity.Rooms</value>
+				<value>com.oracle.entity.Caigou</value>
+				<value>com.oracle.entity.Goods</value>
+				<value>com.oracle.entity.City</value>
+				<value>com.oracle.entity.Users</value>
+				<value>com.oracle.entity.Provider</value>
+				<value>com.oracle.entity.Customercart</value>
+				<value>com.oracle.entity.Assets</value>
+				<value>com.oracle.entity.Usersvip</value>
+				<value>com.oracle.entity.Admins</value>
+				<value>com.oracle.entity.Staffs</value>
+				<value>com.oracle.entity.Roomstatus</value>
+				<value>com.oracle.entity.Adminroles</value>
+				<value>com.oracle.entity.Sexs</value>
+				<value>com.oracle.entity.Roomselect</value>
+				<value>com.oracle.entity.Roomtypes</value>
+				<value>com.oracle.entity.Orderstatus</value>
+				<value>com.oracle.entity.Goodstypes</value>
+				<value>com.oracle.entity.Province</value>
+				<value>com.oracle.entity.Caigoudittyitems</value>
+				<value>com.oracle.entity.Repair</value>
+				<value>com.oracle.entity.Permission</value>
+				<value>com.oracle.entity.Caigougoodsitems</value>
+				<value>com.oracle.entity.Usersputong</value>
+				<value>com.oracle.entity.Usersnews</value>
+				<value>com.oracle.entity.UserRoomOrder</value></list>
+		</property></bean>
+	<bean id="RoomusersDAO" class="com.oracle.dao.RoomusersDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="EntrepotDAO" class="com.oracle.dao.EntrepotDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="AreaDAO" class="com.oracle.dao.AreaDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="GoodsimgDAO" class="com.oracle.dao.GoodsimgDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="AssetsdetalDAO"
+		class="com.oracle.dao.AssetsdetalDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="DittyDAO" class="com.oracle.dao.DittyDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="RoomimgsDAO" class="com.oracle.dao.RoomimgsDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CustomerordersDAO"
+		class="com.oracle.dao.CustomerordersDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CustomerorderitemsDAO"
+		class="com.oracle.dao.CustomerorderitemsDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="RoomsDAO" class="com.oracle.dao.RoomsDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CaigouDAO" class="com.oracle.dao.CaigouDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="GoodsDAO" class="com.oracle.dao.GoodsDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CityDAO" class="com.oracle.dao.CityDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="UsersDAO" class="com.oracle.dao.UsersDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="ProviderDAO" class="com.oracle.dao.ProviderDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CustomercartDAO"
+		class="com.oracle.dao.CustomercartDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="AssetsDAO" class="com.oracle.dao.AssetsDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="UsersvipDAO" class="com.oracle.dao.UsersvipDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="AdminsDAO" class="com.oracle.dao.AdminsDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="StaffsDAO" class="com.oracle.dao.StaffsDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="RoomstatusDAO" class="com.oracle.dao.RoomstatusDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="AdminrolesDAO" class="com.oracle.dao.AdminrolesDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="SexsDAO" class="com.oracle.dao.SexsDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="RoomselectDAO" class="com.oracle.dao.RoomselectDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="RoomtypesDAO" class="com.oracle.dao.RoomtypesDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="OrderstatusDAO"
+		class="com.oracle.dao.OrderstatusDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="GoodstypesDAO" class="com.oracle.dao.GoodstypesDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="ProvinceDAO" class="com.oracle.dao.ProvinceDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CaigoudittyitemsDAO"
+		class="com.oracle.dao.CaigoudittyitemsDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="RepairDAO" class="com.oracle.dao.RepairDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="PermissionDAO" class="com.oracle.dao.PermissionDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="CaigougoodsitemsDAO"
+		class="com.oracle.dao.CaigougoodsitemsDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="UsersputongDAO"
+		class="com.oracle.dao.UsersputongDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="UsersnewsDAO" class="com.oracle.dao.UsersnewsDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<bean id="UserRoomOrderDAO" class="com.oracle.dao.UserRoomOrderDAO">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+	<!-- 配置事务管理器 -->
+	<bean id="transactionManager" class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	<!-- 事务管理 -->
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	
+	<bean id="ehCacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">
+		<property name="configLocation" value="classpath:ehcache.xml" />
+		<property name="shared" value="true" />
+	</bean>
+
+	<bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheCacheManager">
+		<property name="cacheManager" ref="ehCacheManager" />
+	</bean>
+
+	<cache:annotation-driven cache-manager="cacheManager"/>
+
+</beans>

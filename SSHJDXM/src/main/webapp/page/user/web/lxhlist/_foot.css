@@ -1,0 +1,93 @@
+﻿.policeInfoF {
+        clear: both;
+        height: 100%;
+        width: 80%;
+        margin: 0 auto;
+        font-size: 12.8px;
+        color: #FFF;
+        padding-top: 20px;
+        text-align: center;
+        line-height:normal;
+    }
+
+        .policeInfoF a {
+            color: #FFF;
+            text-decoration: none;
+        }
+
+            .policeInfoF a:visited {
+                color: #FFF;
+                text-decoration: none;
+            }
+
+
+
+             .footerRightF{
+        width: 69%; float: right; min-height: 100px;
+    }
+
+ .tdTitleNavF {
+            font-size: 15.2px;
+            text-align: left;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+ .tdChildNavF {
+            font-size: 12.8px;
+            text-align: left;
+            padding-top: 5px;
+            cursor: pointer;
+            padding-left:3px;
+            line-height:normal;
+        }
+        .tdChildNavF a{
+          text-decoration:none;
+          color:#FFF;
+        }
+            .tdChildNavF a:visited {
+                text-decoration: none;
+            }
+
+            .tdChildNavF::outside {
+                font-weight: normal;
+            }
+
+    .footerLeftF{
+        width: 20%; float: left; height: 100px;text-align:center;line-height:50px;text-align:left
+    }
+
+
+@media only screen and (min-width:1360px) {
+
+}
+
+@media (min-width: 1280px) and (max-width: 1359px) {
+
+}
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+    .footerLeftF {
+        width:22%;
+    }
+    .footerRightF {
+        width:67%;
+    }
+
+}
+
+
+@media (min-width: 800px) and (max-width: 1023px) {
+
+    .footerLeftF {
+        width:26%;
+    }
+    .footerRightF {
+        width:63%;
+    }
+}
+
+
+.footer_bg{
+    width:100%;
+}

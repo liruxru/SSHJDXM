@@ -1,0 +1,182 @@
+@CHARSET "UTF-8";
+body {
+	padding: 0px;
+	margin: 0px;
+	font-size: 12px;
+}
+
+body a {
+	color: #03515d;
+	text-decoration: none;
+}
+
+body button {
+	color: #03515d;
+}
+
+body span {
+	color: #03515d;
+	font-size: 15px;
+}
+.center_bottom input {
+    color: #03515d;
+    font-size: 15px;
+    height: 26px;
+    width: 38px;
+    padding: 1px;
+    vertical-align: middle;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 15px;
+    line-height: 22px;
+}
+/**************************布局部分********************/
+#bottom_right_top {
+	position: relative;
+	margin-left:200px;
+	float: left;
+	width: 990px;
+	height: 60px;
+}
+
+#bottom_right_top 
+#bottom_right_top_left {
+	position: relative;
+	float: left;
+	width: 560px;
+	height: 60px;
+	text-align: left;
+	margin-top: 10px;
+	margin-left: 60px;
+}
+
+#bottom_right_top 
+#bottom_right_top_left .xiaokuang {
+	width: 68px;
+	text-align: center;
+}
+
+#bottom_right_top 
+#bottom_right_top_right input {
+	position: relative;
+	float: left;
+	width: 60px;
+	height: 40px;
+	margin-top: 10px;
+	margin-left: 20px;
+}
+
+
+
+.table_div {
+	width: 1300px;
+	padding: 10px;
+	margin: 0 auto;
+}
+
+.div_clear {
+	clear: both;
+}
+
+.left_top {
+	background: url("./tab/images/tab_03.gif");
+	height: 30px;
+	width: 12px;
+	float: left;
+}
+
+.left_bottom {
+	background: url("./tab/images/tab_18.gif");
+	height: 35px;
+	width: 12px;
+	float: left;
+}
+
+.center_top {
+	background: url("./tab/images/tab_05.gif") repeat-x;
+	height: 30px;
+	line-height: 30px;
+	width: 1270px;
+	float: left;
+}
+
+.center_center {
+	height: 500px;
+	width: 1270px;
+	float: left;
+}
+
+.center_bottom {
+	background: url("./tab/images/tab_19.gif") repeat-x;
+	height: 35px;
+	width: 1270px;
+	float: left;
+	line-height: 35px;
+}
+
+.right_top {
+	background: url("./tab/images/tab_07.gif");
+	height: 30px;
+	width: 15px;
+	float: left;
+}
+
+.right_bottom {
+	background: url("./tab/images/tab_20.gif");
+	height: 35px;
+	width: 15px;
+	float: left;
+}
+/**************************************表格内容***********************************/
+.table_content {
+	margin: 5px;
+	border: 1px solid #B5D6E6;
+	width: 1270px;
+	height: 500px;
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+.table_content table {
+	width: 100%;
+	border: 0;
+	border-collapse: collapse;
+	font-size: 12px;
+}
+
+.table_content table tr:hover {
+	background-color: #C1EBFF;
+}
+
+.table_content table th {
+	border-collapse: collapse;
+	text-align: center;
+	height: 30px;
+	background: url("./tab/images/bg.gif");
+	border-right: 1px solid #B5D6E6;
+	border-bottom: 1px solid #B5D6E6;
+}
+
+.table_content table td {
+	height: 52px;
+	word-wrap: break-word;
+	max-width: 200px;
+	text-align: center;
+	vertical-align: middle;
+	border-right: 1px solid #B5D6E6;
+	border-bottom: 1px solid #B5D6E6;
+}
+#but{
+border: 0;
+}
+ul,li{
+list-style: none;
+}
+td li img{
+    display:none;
+    z-index: 99;
+}
+td li:hover img{
+      display:block;
+     z-index: 99;
+}

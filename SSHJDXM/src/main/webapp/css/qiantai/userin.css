@@ -1,0 +1,129 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html body {
+	background-color: #E3E4E5;
+}
+
+#all {
+	position: relative;
+	width: 1223px;
+	height: 630px;
+	margin-left: 100px;
+}
+
+#bt {
+	position: relative;
+	width: 100%;
+	height: 60px;
+	background-color: #FFFFFF;
+	text-align: center;
+	margin-top: 10px;
+	font-size: 30px;
+	padding-top: 15px;
+}
+
+#tables_left , #tables_center ,#tables_right{
+	position: relative;
+	float:left;
+	width: 407px;
+	height: 470px;
+	background-color: #FFFFFF;
+	margin-top: 10px;
+	padding-top: 10px;
+}
+
+#tables_left .input-box ,#tables_center .input-box ,#tables_right .input-box{
+	position: relative;
+	border: solid 1px #ddd;
+	width: 300px;
+	height: 52px;
+	margin-left: 40px;
+	margin-bottom: 10px;
+}
+
+label {
+	position: relative;
+	float: left;
+	width: 80px;
+	height: 52px;
+	line-height: 52px;
+	padding-left: 20px;
+}
+
+.input-box input {
+	position: relative;
+	z-index: 2;
+	border: hidden;
+	line-height: 46px;
+	width: 200px;
+	/*margin-left: 20px;*/
+	margin-top: 1px;
+	font-size: 14px;
+	font-family: "Microsoft YaHei", "Hiragino Sans GB";
+	display: inline;
+}
+
+#but {
+	position: relative;
+	float:left;
+	color: #fff;
+	background: #e22;
+	font-size: 16px;
+	font-family: "Microsoft YaHei", "Hiragino Sans GB";
+	width: 300px;
+	height: 52px;
+	margin-left: 60px;
+	margin-top: 10px;
+}
+
+#div_message {
+    position: absolute;
+    top: 50%;
+    left:50%;
+	padding: 10px;
+    border: 1px;
+    border-radius: 4px;
+    background-color: #bc8c02;
+    width: 200px;
+    height: 70px;
+    line-height: 20px;
+    overflow: hidden;
+    text-align: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    margin: -150px 0 0 -100px;
+    z-index: 9999;
+}
+#div_addsuccess {
+    position: absolute;
+    top: 50%;
+    left:50%;
+	padding: 10px;
+    border: 1px;
+    border-radius: 4px;
+    background-color: #008040;
+    width: 200px;
+    height: 70px;
+    line-height: 20px;
+    overflow: hidden;
+    text-align: center;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    margin: -150px 0 0 -100px;
+    z-index: 9999;
+}

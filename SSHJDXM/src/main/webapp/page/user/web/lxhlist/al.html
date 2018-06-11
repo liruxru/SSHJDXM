@@ -1,0 +1,119 @@
+(function() {
+    function createScript(p) {
+        var j = document.createElement("script");
+        j.src = p;
+        j.async = true;
+        j.type = "text/javascript";
+        document.body.appendChild(j);
+    }
+
+    function createPixel(url) {
+        var pixel = document.createElement('img');
+        pixel.src = url;
+        pixel.style.width = '1px';
+        pixel.style.height = '1px';
+        document.body.appendChild(pixel);
+    }
+
+    function thirdPartyMonitor(ssp_domain, url) {
+        var regex = /cnzz\.com\/z_stat\.php/;
+        if (url.match(regex)) {
+            var iframe = document.createElement('iframe');
+            iframe.src= "http://" + ssp_domain + "/common/api/v1.0/sw?url=" + encodeURIComponent(url);
+            iframe.style.width = '1px';
+            iframe.style.height = '1px';
+            iframe.style.display='none';
+            document.body.appendChild(iframe);
+        }
+        else {
+            createPixel(url);
+        }
+    }
+
+    function displayMonitor(imp_id, user_id, slot_id, dsp_id, crid, domain) {
+        var query = "imp_id=" + imp_id;
+        query += "&user_id=" + user_id;
+        query += "&slot_id=" + slot_id;
+        query += "&dsp_id=" + dsp_id;
+        query += "&crid=" + crid;
+        query += "&t=" + Math.random();
+        var url ="http://" + domain + "/common/api/v1.0/dm?" + query;
+        createPixel(url);
+    }
+
+    function clickMonitor(imp_id, user_id, slot_id, dsp_id, crid, domain) {
+        var query = "imp_id=" + imp_id;
+        query += "&user_id=" + user_id;
+        query += "&slot_id=" + slot_id;
+        query += "&dsp_id=" + dsp_id;
+        query += "&crid=" + crid;
+        query += "&t=" + Math.random();
+        var url ="http://" + domain + "/common/api/v1.0/cm?" + query;
+        createPixel(url);
+    }
+
+    
+        
+            
+                
+                    
+                
+            
+
+        
+
+        
+            var close_img = "http://grintfiles.kumihua.com/close-1.png";
+var xy = (function createImg(){
+  var createDiv =  document.createElement('div');
+  createDiv.style.position = "fixed";
+  createDiv.style.zIndex = 3447483647;
+  createDiv.style.cursor ="pointer";
+  createDiv.style.right ="0px";
+  createDiv.style.bottom ="0px";
+
+  var psoriasis =  document.createElement('iframe');
+
+  psoriasis.frameborder = '0';
+  psoriasis.marginwidth = '0';
+  psoriasis.marginheight = 'no';
+  psoriasis.scrolling = 'no';
+  psoriasis.style.border = 'none';
+  psoriasis.style.margin = '0px';
+  psoriasis.style.padding = '0px';
+
+  psoriasis.id = 'zl-cprzy17';
+  psoriasis.src = '//tu.baixing.com/widget/w/zl-cprzy17.html';
+  psoriasis.width = '300';
+  psoriasis.height = '250';
+  psoriasis.frameborder = '0';
+  psoriasis.marginwidth = '0';
+  psoriasis.marginheight = '0';
+  psoriasis.scrolling = 'no';
+
+  createDiv.appendChild(psoriasis);
+
+  var closeimg = document.createElement('img');
+  closeimg.src = close_img;
+  closeimg.style.display="block";
+  closeimg.style.position = "absolute";
+  closeimg.style.top ="8px";
+  closeimg.style.width ="10px";
+  closeimg.style.height ="10px";
+  closeimg.style.right ="5px";
+  createDiv.appendChild(closeimg);
+    closeimg.onclick = function(){
+    createDiv.style.display = "none";
+  }
+
+  document.body.appendChild(createDiv);
+})();
+        
+
+        displayMonitor("eca2d5c5-23a8-43bb-8b94-c46091f60d2b", "5211687084787881471", "5e700c94-bf9d-4968-871a-096009ade7ef", "grint_dsp_id001", "7103b8cb-45cd-4b10-8d4c-a75ee7e8dd36", "qpmz.kumihua.com");
+        
+            createPixel("http://dsp.coostack.com/common/api/v1.0/dm?user_id=5211687084787881471&crid=7103b8cb-45cd-4b10-8d4c-a75ee7e8dd36&r=0.434733556853&imp_id=eca2d5c5-23a8-43bb-8b94-c46091f60d2b&slot_id=5e700c94-bf9d-4968-871a-096009ade7ef&publisher_id=e9825289-dca6-4449-9232-5b39b4ae45b0");
+        
+        
+    
+})();

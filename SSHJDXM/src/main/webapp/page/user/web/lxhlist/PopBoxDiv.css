@@ -1,0 +1,163 @@
+﻿/***
+    弹窗注册|登录 样式表
+    Create By JoneLu 2016/09/09
+    重阳节O(∩_∩)O
+    */
+
+.ly_popBoxDiv .item_lg
+{
+    margin-bottom: 15px;
+    border: 1px solid #ece8e6;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    border-radius: 0px;
+    font-size: 14px;
+    margin-top: 20px;
+    margin-right: 40px;
+    margin-left: 40px;
+    zoom: 1;
+    display: table;
+    position: relative;
+    width:356px;
+}
+.ly_popBoxDiv .lg_input
+{
+    max-width: 100%;
+    width: 100%;
+    margin: 0px;
+    /*padding: 0px;*/
+    /*padding-left:20px;*/
+    padding-top:0px;
+    padding-right:0px;
+    padding-bottom:0px;
+    border: none !important;
+    border-width: 0;
+    line-height: 27px;
+    vertical-align:middle;
+    height: 27px;
+    background-color: transparent !important;
+    font-size: 14px;
+    color: #666;
+    /*去除bootstrap的样式*/
+    border:0 !important;
+    outline:none !important;
+    box-shadow:none !important;
+    -webkit-box-shadow:none !important;
+    -moz-box-box-shadow:none !important;
+    -ms-box-box-shadow:none !important;
+    font-family:arial,"microsoft yahei",simsun,sans-self;
+}
+
+/*去除bootstrap的样式*/
+.ly_popBoxDiv .lg_input:focus{
+    outline: none !important;  
+    border:0 !important;  
+    border-radius: 0px;
+    box-shadow:none !important;
+    -webkit-box-shadow:none !important;
+    -moz-box-box-shadow:none !important;
+    -ms-box-box-shadow:none !important;
+}
+/*文本框取得焦点*/
+.item_lg_active
+{
+    -webkit-box-shadow:0 0 3px 0 #cecbc7,0 0 6px 0 #e3d5de,0 0 6px 0 #eee6eb !important;
+    -moz-box-shadow:0 0 3px 0 #cecbc7,0 0 6px 0 #e3d5de,0 0 6px 0 #eee6eb !important;
+    -ms-box-shadow:0 0 3px 0 #cecbc7,0 0 6px 0 #e3d5de,0 0 6px 0 #eee6eb !important;
+    box-shadow:0px 0px 3px 0px #cecbc7,0 0 6px 0 #e3d5de,0 0 6px 0 #eee6eb !important;
+}
+.ly_popBoxDiv .lg_span
+{
+    padding-top: 12px;
+    padding-bottom: 12px;
+    line-height: 24px;
+    min-width: 83px;
+    color: #666;
+    font-weight: bold;
+    float: left;
+    cursor: pointer;
+    padding-left:15px !important;
+    margin-left:0px;
+}
+.ly_popBoxDiv .lg_inputBox {
+    width: 190px;
+    padding-top: 12px;
+    padding-right: 30px;
+    position: relative;
+    float: left;
+}
+.ly_popBoxDiv .icon_small_login {
+    background-image: url(/Images/Amendment/Login/bg_icon_small.png);
+    width: 26px;
+    height: 24px;
+    display: inline-block;
+    line-height: 24px;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
+.ly_popBoxDiv .icon_small_user {
+    background-position: -25px -200px;
+}
+
+.ly_popBoxDiv .icon_small_user
+{
+    background-position: -25px -200px;
+}
+.ly_popBoxDiv .icon_small_password
+{
+    background-position: 0 -250px;
+}
+.ly_popBoxDiv .icon_small_yzm
+{
+    background-position: -25px -250px;
+}
+.ly_popBoxDiv .icon_small_lifs
+{
+    background-position: -2px -200px;
+}
+.ly_popBoxDiv .lg_btnSign {
+    width: 100%;
+    cursor: pointer;
+    color: #fff;
+    background-color: #2A4F67;
+    border: 1px solid #2A4F67;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    -ms-border-radius: 0px;
+    border-radius: 0px;
+    padding: 0;
+    font-size: 14px;
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    border-width: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+.ly_popBoxDiv .base_error {
+    background: none repeat scroll 0 0 #F8F8F8;
+    border: 1px solid #EEEEEE;
+    color: #F20409;
+    display: inline-block;
+    line-height: 30px;
+    margin: -6px 0 14px 44px;
+    z-index: 9999;
+    min-width: 345px;
+    text-align: center;
+}
+.ly_popBoxDiv .item_nonMem
+{
+    text-align:center;
+    margin-bottom:0px;
+    color:#2A4F67;
+}
+.ly_popBoxDiv *
+{
+    transition:box-shadow 0.2s linear;
+    -moz-transition:box-shadow 0.2s linear;
+    -ms-transition:box-shadow 0.2s linear;
+    -webkit-transition:box-shadow 0.2s linear;
+    -o-transition:box-shadow 0.2s top linear;
+}
